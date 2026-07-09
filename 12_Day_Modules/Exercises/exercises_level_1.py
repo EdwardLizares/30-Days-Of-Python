@@ -8,7 +8,7 @@ def user_id_gen_by_user():
     c = int(input())
     n = int(input())
     res = ""
-    for i in range(n):
+    for _ in range(n):
         res += ''.join(random.choices(string.ascii_letters + string.digits, k=c)) + "\n"
     return res
 
