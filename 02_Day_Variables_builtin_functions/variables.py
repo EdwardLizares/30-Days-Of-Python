@@ -1,40 +1,45 @@
 
-# Variables in Python
+# Exercises: Level 1
 
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-country = 'Finland'
-city = 'Helsinki'
-age = 250
-is_married = True
-skills = ['HTML', 'CSS', 'JS', 'React', 'Python']
-person_info = {
-    'firstname': 'Asabeneh',
-    'lastname': 'Yetayeh',
-    'country': 'Finland',
-    'city': 'Helsinki'
-}
+# Day 2: 30 Days of python programming
+
+first_name = 'Edward'
+last_name = 'Lizares'
+full_name = 'Edward Lizares'
+country = 'Philippines'
+city = 'Makati'
+age = 21
+year = 2026
+is_married = False
+is_true = True
+is_light_on = True
+x, y, z = 1, 2, 3
 
 # Printing the values stored in the variables
 
-print('First name:', first_name)
+print(type(first_name))
 print('First name length:', len(first_name))
-print('Last name: ', last_name)
 print('Last name length: ', len(last_name))
-print('Country: ', country)
-print('City: ', city)
-print('Age: ', age)
-print('Married: ', is_married)
-print('Skills: ', skills)
-print('Person information: ', person_info)
 
-# Declaring multiple variables in one line
+num_one = 5
+num_two = 4
 
-first_name, last_name, country, age, is_married = 'Asabeneh', 'Yetayeh', 'Helsink', 250, True
+total = num_one + num_two
+diff = num_one - num_two
+product = num_one * num_two
+division = num_one / num_two
+remainder = num_one % num_two
+exp = num_one ** num_two
+floor_division = num_one // num_two
 
-print(first_name, last_name, country, age, is_married)
-print('First name:', first_name)
-print('Last name: ', last_name)
-print('Country: ', country)
-print('Age: ', age)
-print('Married: ', is_married)
+area_of_circle = 3.14 * 30 ** 2
+circum_of_circle = 2 * 3.14 * 30
+area = 3.14 * int(input('Enter radius: ')) ** 2
+print(area)
+
+first_name =input('Enter your first name: ')
+last_name = input('Enter your last name: ')
+counry = input('Enter your country: ')
+age = input('Enter your age: ')
+
+help('keywords')
