@@ -1,0 +1,27 @@
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+ages.sort()
+min_age = ages[0]
+max_age = ages[-1]
+print("Minimum age:", min_age)
+print("Maximum age:", max_age)
+
+ages.insert(0, min_age)
+ages.append(max_age)
+
+median_age = ages[len(ages)//2] if len(ages) % 2 == 1 else (ages[len(ages)//2 - 1] + ages[len(ages)//2]) / 2
+print("Median age:", median_age)
+
+avg_age = sum(ages) / len(ages)
+print("Average age:", avg_age)
+
+range_age = max_age - min_age
+print("Range of ages:", range_age)
+
+print("Min - Average:", abs(min_age - avg_age))
+print("Max - Average:", abs(max_age - avg_age))
+
+# skip 1 & 2
+
+country_1, country_2, country_3, *scandic_countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+print("3:", country_1, country_2, country_3, scandic_countries)
