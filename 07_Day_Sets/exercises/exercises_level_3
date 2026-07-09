@@ -1,0 +1,6 @@
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+
+age_set = set(age)
+print("1:", age_set)
+print("2:", "They lwk can all do the same things, dif use cases")
+print("3:", len(set("I am a teacher and I love to inspire and teach people".split())))
