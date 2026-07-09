@@ -17,7 +17,7 @@ print("5:", food_stuff_lt[:3] + food_stuff_lt[-3:])
 del food_stuff_tp
 try:
     print(food_stuff_tp)
-except:
+except NameError:
     print("6: food_stuff_tp was deleted.")
 
 nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
