@@ -16,4 +16,3 @@ def most_frequent_words(t):
 if __name__ == "__main__":
     print("1:", clean_text(sentence))
     print("1:", most_frequent_words(clean_text(sentence)))
-
