@@ -1,7 +1,7 @@
 def count_lines_and_words(file_path):
     line_count = 0
     word_count = 0
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.read().splitlines()
         line_count = len(lines)
         for line in lines:
@@ -26,12 +26,13 @@ def most_populated_countries(file_path, n):
     with open(file_path, 'r', encoding='utf-8') as f:
         s = f.read()
     d = json.loads(s)
-    return [dict(country=t[1], population=t[0]) for t in sorted([(c['population'], c['name']) for c in d if 'population' in c], reverse=True)[:n]]
+    return [dict(country=t[1], population=t[0]) for t in sorted([(c['population'], c['name']) 
+                                                for c in d if 'population' in c], reverse=True)[:n]]
 
 if __name__ == "__main__":
-    print("1.i:", count_lines_and_words('data\obama_speech.txt'))
-    print("1.ii:", count_lines_and_words('data\michelle_obama_speech.txt'))
-    print("1.iii:", count_lines_and_words('data\donald_speech.txt'))
-    print("1.iv:", count_lines_and_words('data\melina_trump_speech.txt')) 
-    print("2:", most_spoken_languages('data\countries_data.json', 10))
-    print("3:", most_populated_countries('data\countries_data.json', 10))
+    print("1.i:", count_lines_and_words('data/obama_speech.txt'))
+    print("1.ii:", count_lines_and_words('data/michelle_obama_speech.txt'))
+    print("1.iii:", count_lines_and_words('data/donald_speech.txt'))
+    print("1.iv:", count_lines_and_words('data/melina_trump_speech.txt'))
+    print("2:", most_spoken_languages('data/countries_data.json', 10))
+    print("3:", most_populated_countries('data/countries_data.json', 10))

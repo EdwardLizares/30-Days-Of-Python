@@ -4,14 +4,14 @@ from bs4 import BeautifulSoup
 
 def boston_scrape():
     url = 'http://www.bu.edu/president/boston-university-facts-stats/'
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
     soup = BeautifulSoup(response.content, 'html.parser')
     #print(soup.title)
     #print(soup.title.get_text)
     #print(soup.body)
 
     links = [link.get('href') for link in soup.find_all("a")]
-    with open("22_Day_Web_scraping\Exercises\links.json", "w") as f:
+    with open("22_Day_Web_scraping/Exercises/links.json", "w", encoding='utf-8') as f:
         json.dump(links, f, indent=4) # indent splits off what would be a long single string
     return links
 
@@ -27,14 +27,14 @@ def wikipedia_scrape():
         "Chrome/138.0.0.0 Safari/537.36"
     )
     }
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=20)
     soup = BeautifulSoup(response.content, 'html.parser')
     # navigation 
     print(response.status_code)
     president_table = soup.find("table", id="mwgQ")
     presidents = president_table.find_all("span", class_="fn")
     president_names = [p.find("a").get_text() for p in presidents]
-    with open("22_Day_Web_scraping\Exercises\presidents.json", "w") as f:
+    with open("22_Day_Web_scraping/Exercises/presidents.json", "w", encoding='utf-8') as f:
         json.dump(president_names, f, indent=4) # indent splits off what would be a long single string
     return president_names
 
